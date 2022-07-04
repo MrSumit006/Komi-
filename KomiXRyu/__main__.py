@@ -109,11 +109,11 @@ Haven't Stopped since: {}
 buttons = [
     [
         InlineKeyboardButton(
-            text="× Invite Kita To Your Place ×",url="t.me/kitaxrobot?startgroup=true"),
+            text="× Invite Yor Forgee To Your Place ×",url="t.me/YorForger_Xbot?startgroup=true"),
     ],
     [
         InlineKeyboardButton(
-            text="- Support -", url=f"https://t.me/Kitaxsupport"),                    
+            text="- Support -", url=f"https://t.me/KaizenSupport"),                    
         InlineKeyboardButton(
             text="- Help -", callback_data="help_back"
         ),
@@ -250,17 +250,17 @@ def start(update: Update, context: CallbackContext):
             )
     else:
                 update.effective_message.reply_photo(
-            START_IMG, caption="ʏᴏ, Kita ʜᴇʀᴇ ᴛᴏ ʜᴇʟᴘ!\n<b>Haven't slept since:</b> <code>{}</code>".format(
+            START_IMG, caption="ʏᴏ, Yor ʜᴇʀᴇ ᴛᴏ ʜᴇʟᴘ!\n<b>Haven't slept since:</b> <code>{}</code>".format(
                 uptime,
             ),
             parse_mode=ParseMode.HTML,
              reply_markup=InlineKeyboardMarkup(
                 [
                   [
-                  InlineKeyboardButton(text="❤Sᴜᴘᴘᴏʀᴛ❤", url="https://telegram.dog/kitaxsupport")
+                  InlineKeyboardButton(text="❤Sᴜᴘᴘᴏʀᴛ❤", url="https://telegram.dog/KaizenSupport")
                   ],
                   [
-                  InlineKeyboardButton(text="🔰Uᴘᴅᴀᴛᴇs🔰", url="https://telegram.dog/kitaxupdates")
+                  InlineKeyboardButton(text="🔰Uᴘᴅᴀᴛᴇs🔰", url="https://telegram.dog/Kaizen_Network")
                   ]
                 ]
             ),
@@ -661,7 +661,7 @@ def main():
                   [                  
                        InlineKeyboardButton(
                              text="[Start Me]",
-                             url="https://t.me/kitaxrobot?start=")
+                             url="https://t.me/YorForger_Xbot?start=")
                      ] 
                 ]
             ),  
@@ -710,7 +710,7 @@ def main():
             updater.bot.set_webhook(url=URL + TOKEN)
 
     else:
-        LOGGER.info(f"kitaxrobot deployed. | BOT: [@kitaxrobot]")
+        LOGGER.info(f"kitaxrobot deployed. | BOT: [@YorForger_Xbto]")
         updater.start_polling(timeout=15, read_latency=4, clean=True)
 
     if len(argv) not in (1, 3, 4):
