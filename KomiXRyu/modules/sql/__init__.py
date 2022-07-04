@@ -5,14 +5,13 @@ from sqlalchemy.orm import sessionmaker, scoped_session
 from KomiXRyu import DB_URI, LOGGER
 
 
+
 def start() -> scoped_session:
-    engine = create_engine(DB_URI, client_encoding="utf8")
-    LOGGER.info("[PostgreSQL] Connecting to database......")
+    engine = create_engine(DB_URL, client_encoding="utf8")
     BASE.metadata.bind = engine
     BASE.metadata.create_all(engine)
-    return scoped_session(sessionmaker(bind=engine, autoflush=False))
+    return scoped_session(sessionmaker(bind=engine, autoflush=True))
 
 
 BASE = declarative_base()
-try:
-    SESSION = start()
+SESSION = start()
